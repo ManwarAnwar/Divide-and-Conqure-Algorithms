@@ -3,9 +3,9 @@ import time
 import sys
 sys.setrecursionlimit(10000)  # increase limit for deep recursion on large arrays
 
-# -------------------------------
+
 # QUICK SORT IMPLEMENTATION
-# -------------------------------
+
 def quick_sort(arr):
     """Recursive Quick Sort (in-place, sorts in increasing order)."""
     def partition(low, high):
@@ -27,9 +27,9 @@ def quick_sort(arr):
     quicksort_recursive(0, len(arr) - 1)
     return arr
 
-# -------------------------------
+
 # MERGE SORT IMPLEMENTATION
-# -------------------------------
+
 def merge_sort(arr):
     """Recursive Merge Sort (returns a new sorted list)."""
     if len(arr) <= 1:
@@ -56,9 +56,9 @@ def merge(left, right):
     result.extend(right[j:])
     return result
 
-# -------------------------------
+
 # PERFORMANCE TEST FUNCTION
-# -------------------------------
+
 def test_sorting_algorithms():
     test_cases = {
         "Random": [random.randint(1, 10000) for _ in range(5000)],
@@ -83,8 +83,8 @@ def test_sorting_algorithms():
         end = time.time()
         print(f"Merge Sort Time: {end - start:.4f} seconds")
 
-# -------------------------------
+
 # MAIN RUNNER
-# -------------------------------
+
 if __name__ == "__main__":
     test_sorting_algorithms()
